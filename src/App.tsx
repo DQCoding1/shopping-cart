@@ -6,14 +6,18 @@ import { publicRoutes } from "./routes";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <Routes>
-      <Route path={publicRoutes.home} element={<Home />} />
-      <Route path={publicRoutes.store} element={<Store />} />
-      <Route path={publicRoutes.about} element={<About />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path={publicRoutes.home} element={<Home />} />
+        <Route path={publicRoutes.store} element={<Store />} />
+        <Route path={publicRoutes.about} element={<About />} />
+      </Routes>
+    </>
   )
 }
 

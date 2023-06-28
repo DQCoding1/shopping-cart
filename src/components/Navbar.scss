@@ -1,0 +1,25 @@
+.navbar{
+  &-li{
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &-link{
+    text-decoration: none;
+    color: #ffffff;
+    opacity: .6;
+  }
+  
+  &-link-active{
+    @extend .navbar-link;
+    opacity: 1;
+    border-bottom: 2px solid rgb(107, 215, 215);
+  }
+  
+  &-shopping-badge{
+    position: absolute;
+    content: "";
+    right: -10%;
+    bottom: -10%;
+  }
+}
