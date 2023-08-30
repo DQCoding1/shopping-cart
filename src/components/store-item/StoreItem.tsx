@@ -3,6 +3,8 @@ import { Button } from "primereact/button";
 import "./StoreItem.scss";
 import { formatCurrency } from "../../utilities/formatCurrency";
 import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../context/hooks/hooks";
+import { createItem, decreaseQuantity, increaseQuantity } from "../../context/slice/shoppingCartSlice";
 
 type StoreItemProps = {
     id: number;
@@ -12,7 +14,9 @@ type StoreItemProps = {
 };
 
 const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
-    const [cart, setCart] = useState(1);
+    const shoppingCart = useAppSelector((state) => state.shoppingCart);
+    const shoppingCartItem = shoppingCart.find((item) => item.id === id);
+    const dispatch = useAppDispatch();
 
     return (
         <Card
@@ -20,8 +24,21 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
             title={name}
             subTitle={formatCurrency(price)}
             footer={
-                cart === 0 ? (
-                    <Button className="w-full flex justify-content-center align-items-center">
+                shoppingCartItem?.quantity === undefined ? (
+                    <Button
+                        className="w-full flex justify-content-center align-items-center"
+                        onClick={() =>
+                            dispatch(
+                                createItem({
+                                    id,
+                                    name,
+                                    price,
+                                    imgUrl,
+                                    quantity: 1,
+                                })
+                            )
+                        }
+                    >
                         Add to cart
                     </Button>
                 ) : (
@@ -31,13 +48,21 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
                             outlined
                             rounded
                             aria-label="minus"
+                            onClick={() => {
+                                dispatch(decreaseQuantity(id));
+                            }}
                         />
-                        <div className="text-lg">{cart}</div>
+                        <div className="text-lg">
+                            {shoppingCartItem?.quantity}
+                        </div>
                         <Button
                             icon="pi pi-plus"
                             outlined
                             rounded
                             aria-label="plus"
+                            onClick={() => {
+                                dispatch(increaseQuantity(id));
+                            }}
                         />
                     </div>
                 )

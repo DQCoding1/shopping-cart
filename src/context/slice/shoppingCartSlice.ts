@@ -10,5 +10,5 @@ const shoppingCartSlice = createSlice({
     reducers: shoppingCartReducers,
 });
 
-export const { increaseQuantity, decreaseQuantity } = shoppingCartSlice.actions;
+export const { increaseQuantity, decreaseQuantity,createItem } = shoppingCartSlice.actions;
 export default shoppingCartSlice.reducer;
