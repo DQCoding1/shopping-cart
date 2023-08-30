@@ -8,10 +8,12 @@
     text-decoration: none;
     color: #ffffff;
     opacity: .6;
+    padding: .2rem 1rem;
   }
   
   &-link-active{
     @extend .navbar-link;
+    width: 100%;
     opacity: 1;
     border-bottom: 2px solid rgb(107, 215, 215);
   }

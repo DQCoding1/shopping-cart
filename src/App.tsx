@@ -6,7 +6,8 @@ import { publicRoutes } from "./routes";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
+import Aside from "./components/aside/Aside";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path={publicRoutes.store} element={<Store />} />
         <Route path={publicRoutes.about} element={<About />} />
       </Routes>
+      <Aside />
     </>
   )
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt",
+    "price": 13.99,
+    "imgUrl": "/imgs/tshirt.jpeg" 
+  },
+  {
+    "id": 2,
+    "name": "Pants",
+    "price": 24.00,
+    "imgUrl": "imgs/pants.jpg" 
+  },
+  {
+    "id": 3,
+    "name": "Shoes",
+    "price": 56.99,
+    "imgUrl": "imgs/shoes.jpg" 
+  },
+  {
+    "id": 4,
+    "name": "T-shirt",
+    "price": 13.99,
+    "imgUrl": "/imgs/tshirt.jpeg" 
+  },
+  {
+    "id": 5,
+    "name": "Pants",
+    "price": 24.00,
+    "imgUrl": "imgs/pants.jpg" 
+  },
+  {
+    "id": 6,
+    "name": "Shoes",
+    "price": 56.99,
+    "imgUrl": "imgs/shoes.jpg" 
+  },
+  {
+    "id": 7,
+    "name": "T-shirt",
+    "price": 13.99,
+    "imgUrl": "/imgs/tshirt.jpeg" 
+  },
+  {
+    "id": 8,
+    "name": "Pants",
+    "price": 24.00,
+    "imgUrl": "imgs/pants.jpg" 
+  },
+  {
+    "id": 9,
+    "name": "Shoes",
+    "price": 56.99,
+    "imgUrl": "imgs/shoes.jpg" 
+  }
+]
