@@ -1,5 +1,5 @@
 import storeItems from "../data/storeItems.json"
-import StoreItem from "../components/store-item/StoreItem"
+import StoreItem from "../components/cart/card/CartCard"
 
 const Home = () => {  
   return (

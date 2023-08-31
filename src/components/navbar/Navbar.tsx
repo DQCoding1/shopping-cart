@@ -5,12 +5,13 @@ import { Badge } from "primereact/badge";
 import "primeicons/primeicons.css";
 import "./Navbar.scss";
 import { showAside } from "../../context/slice/AsideSlice";
-import { useAppDispatch } from "../../context/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../context/hooks/hooks";
 
 const Navbar = () => {
     const dispatch = useAppDispatch();
     const isActiveNavbarLink = ({ isActive }: { isActive: boolean }) =>
         isActive ? "navbar-link-active" : "navbar-link";
+    const shoppingCart = useAppSelector(state => state.shoppingCart)
 
     return (
         <header>
@@ -26,10 +27,10 @@ const Navbar = () => {
                     </li>
                     <li className="navbar-li">
                         <NavLink
-                            to={publicRoutes.store}
+                            to={publicRoutes.contact}
                             className={isActiveNavbarLink}
                         >
-                            Store
+                            Contact
                         </NavLink>
                     </li>
                     <li className="navbar-li">
@@ -50,7 +51,7 @@ const Navbar = () => {
                         onClick={()=> dispatch(showAside())}
                     />
                     <Badge
-                        value={2}
+                        value={shoppingCart.length}
                         severity="warning"
                         className="absolute navbar-shopping-badge"
                     />

@@ -1,10 +1,9 @@
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
-import "./StoreItem.scss";
-import { formatCurrency } from "../../utilities/formatCurrency";
-import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../context/hooks/hooks";
-import { createItem, decreaseQuantity, increaseQuantity } from "../../context/slice/shoppingCartSlice";
+import { formatCurrency } from "../../../utilities/formatCurrency";
+import { useAppDispatch, useAppSelector } from "../../../context/hooks/hooks";
+import { createItem, decreaseQuantity, increaseQuantity } from "../../../context/slice/shoppingCartSlice";
+import "./CartCard.scss";
 
 type StoreItemProps = {
     id: number;

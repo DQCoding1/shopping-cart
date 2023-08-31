@@ -14,9 +14,7 @@ const shoppingCartReducers = {
                       quantity: item.quantity+1,
                   }
                 : item
-        );
-        console.log(newState);
-        
+        );        
         return newState;
     },
 

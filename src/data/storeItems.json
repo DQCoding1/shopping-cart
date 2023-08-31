@@ -1,55 +1,55 @@
 [
   {
     "id": 1,
-    "name": "T-shirt",
+    "name": "T-shirt #1",
     "price": 13.99,
     "imgUrl": "/imgs/tshirt.jpeg" 
   },
   {
     "id": 2,
-    "name": "Pants",
+    "name": "Pants #1",
     "price": 24.00,
     "imgUrl": "imgs/pants.jpg" 
   },
   {
     "id": 3,
-    "name": "Shoes",
+    "name": "Shoes #1",
     "price": 56.99,
     "imgUrl": "imgs/shoes.jpg" 
   },
   {
     "id": 4,
-    "name": "T-shirt",
+    "name": "T-shirt #2",
     "price": 13.99,
     "imgUrl": "/imgs/tshirt.jpeg" 
   },
   {
     "id": 5,
-    "name": "Pants",
+    "name": "Pants #2",
     "price": 24.00,
     "imgUrl": "imgs/pants.jpg" 
   },
   {
     "id": 6,
-    "name": "Shoes",
+    "name": "Shoes #2",
     "price": 56.99,
     "imgUrl": "imgs/shoes.jpg" 
   },
   {
     "id": 7,
-    "name": "T-shirt",
+    "name": "T-shirt #3",
     "price": 13.99,
     "imgUrl": "/imgs/tshirt.jpeg" 
   },
   {
     "id": 8,
-    "name": "Pants",
+    "name": "Pants #3",
     "price": 24.00,
     "imgUrl": "imgs/pants.jpg" 
   },
   {
     "id": 9,
-    "name": "Shoes",
+    "name": "Shoes #3",
     "price": 56.99,
     "imgUrl": "imgs/shoes.jpg" 
   }
